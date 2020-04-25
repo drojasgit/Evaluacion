@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActMenu">
+
+    <TextView
+        android:id="@+id/tvTituloBici"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginRight="173dp"
+        android:layout_marginBottom="-10dp"
+        android:text="título..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgBike"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDerechos"
+        android:layout_width="447dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="122dp"
+        android:text="derechos..."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tblBotones" />
+
+    <TableLayout
+        android:id="@+id/tblBotones"
+        android:layout_width="197dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginRight="166dp"
+        android:layout_marginBottom="71dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDerechos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBike">
+
+        <TableRow
+            android:id="@+id/trUno"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnBicicletas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="accederBicicletas"
+                android:text="Bicicletas" />
+
+            <Button
+                android:id="@+id/btnFinanzas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="accederFinanzas"
+                android:text="Finanzas" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trDos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnUsuarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="accederUsuarios"
+                android:text="Usuarios" />
+
+            <Button
+                android:id="@+id/btnSalir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="salir"
+                android:text="Salir" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imgBike"
+        android:layout_width="503dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/tblBotones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloBici"
+        app:srcCompat="@drawable/bike" />
+</androidx.constraintlayout.widget.ConstraintLayout>
